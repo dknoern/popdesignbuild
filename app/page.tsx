@@ -319,11 +319,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="flex justify-center mt-10">
-              <Button size="lg" variant="outline" asChild>
-                <Link href="#">View All Projects</Link>
-              </Button>
-            </div>
+
           </div>
         </section>
 
@@ -470,19 +466,19 @@ export default function Home() {
               </div>
               <div className="bg-white text-foreground rounded-lg p-6 shadow-lg">
                 <h3 className="text-xl font-bold mb-4">Request a Consultation</h3>
-                <form className="space-y-4">
+                <form className="space-y-4" action="https://usebasin.com/f/ab6841e70d49" method="POST">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label htmlFor="first-name" className="text-sm font-medium">
                         First Name
                       </label>
-                      <input id="first-name" className="w-full px-3 py-2 border rounded-md" placeholder="John" />
+                      <input id="first-name" name="first-name" className="w-full px-3 py-2 border rounded-md" placeholder="John" />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="last-name" className="text-sm font-medium">
                         Last Name
                       </label>
-                      <input id="last-name" className="w-full px-3 py-2 border rounded-md" placeholder="Doe" />
+                      <input id="last-name" name="last-name" className="w-full px-3 py-2 border rounded-md" placeholder="Doe" />
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -492,6 +488,7 @@ export default function Home() {
                     <input
                       id="email"
                       type="email"
+                      name="email" 
                       className="w-full px-3 py-2 border rounded-md"
                       placeholder="john.doe@example.com"
                     />
@@ -503,6 +500,7 @@ export default function Home() {
                     <input
                       id="phone"
                       type="tel"
+                      name="phone"
                       className="w-full px-3 py-2 border rounded-md"
                       placeholder="(555) 123-4567"
                     />
@@ -511,7 +509,7 @@ export default function Home() {
                     <label htmlFor="service" className="text-sm font-medium">
                       Service Interested In
                     </label>
-                    <select id="service" className="w-full px-3 py-2 border rounded-md">
+                    <select id="service" name="service" className="w-full px-3 py-2 border rounded-md">
                       <option value="">Select a service</option>
                       <option value="staging">Home Staging</option>
                       <option value="remodeling">Interior Remodeling</option>
@@ -525,11 +523,12 @@ export default function Home() {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       className="w-full px-3 py-2 border rounded-md min-h-[120px]"
                       placeholder="Tell us about your project..."
                     ></textarea>
                   </div>
-                  <Button className="w-full" size="lg" disabled>
+                  <Button className="w-full" size="lg">
                     Submit Request
                   </Button>
                 </form>
