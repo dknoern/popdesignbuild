@@ -261,7 +261,7 @@ export default function Home() {
                   name: "Michael",
                   role: "Real Estate Agent",
                   quote:
-                    "I've worked with many staging companies, but Elegant Interiors consistently delivers the best results. Their staging helped me sell properties faster and at higher prices.",
+                    "I've worked with many staging companies, but Pop Design consistently delivers the best results. Their staging helped me sell properties faster and at higher prices.",
                 },
                 {
                   name: "Emily",
@@ -454,7 +454,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <Link href="/" className="flex items-center gap-2 font-semibold mb-4">
-                <span className="text-xl">Elegant Interiors</span>
+                <span className="text-xl">Pop Design Build</span>
               </Link>
               <p className="text-muted-foreground max-w-xs">
                 Transforming spaces with thoughtful design and exceptional craftsmanship since 2010.
@@ -569,7 +569,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t text-center text-muted-foreground">
-            <p>© {new Date().getFullYear()} Elegant Interiors. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Pop Design Build. All rights reserved.</p>
           </div>
         </div>
       </footer>
