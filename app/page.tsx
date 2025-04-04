@@ -576,7 +576,7 @@ export default function Home() {
       <ImageModal
         isOpen={!!selectedImage}
         onClose={() => setSelectedImage(null)}
-        imageUrl={selectedImage?.url || ""}
+        imageUrl={selectedImage?.url || "/placeholder.jpg"}
         title={selectedImage?.title || ""}
       />
     </div>
