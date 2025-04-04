@@ -188,35 +188,121 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
-                  title: "Modern Minimalist Dining Room",
-                  image: "/gallery1.jpeg"
+                  image: "/gallery/gallery1.jpg"
                 },
                 {
-                  title: "Luxury Living Room",
-                  image: "/gallery2.jpeg"
-                },
+                  image: "/gallery/gallery2.jpg"
+                },   
+                
                 {
-                  title: "Clean and Light Great Room",
-                  image: "/gallery3.jpeg"
-                },
+                  image: "/gallery/gallery3.jpg"
+                },    
                 {
-                  title: "Comfortable Lounge Area",
-                  image: "/gallery4.jpg"
-                },
+                  image: "/gallery/gallery4.jpg"
+                },    
                 {
-                  title: "Relaxing Bedroom and Lounge",
-                  image: "/gallery5.jpg"
-                },
+                  image: "/gallery/gallery5.jpg"
+                },    
                 {
-                  title: "Executive Home Office",
-                  image: "/gallery6.jpg"
-                }
+                  image: "/gallery/gallery6.jpg"
+                },    
+                {
+                  image: "/gallery/gallery7.jpg"
+                },    
+                {
+                  image: "/gallery/gallery8.jpg"
+                },    
+                {
+                  image: "/gallery/gallery9.jpg"
+                },                    
+                {
+                  image: "/gallery/gallery10.jpg"
+                },    
+                {
+                  image: "/gallery/gallery11.jpg"
+                },    
+                {
+                  image: "/gallery/gallery12.jpg"
+                },    
+                {
+                  image: "/gallery/gallery13.jpg"
+                },    
+                {
+                  image: "/gallery/gallery14.jpg"
+                },    
+                {
+                  image: "/gallery/gallery15.jpg"
+                },    
+                {
+                  image: "/gallery/gallery16.jpg"
+                },    
+                {
+                  image: "/gallery/gallery17.jpg"
+                },    
+
+                {
+                  image: "/gallery/gallery18.jpg"
+                },   
+                {
+                  image: "/gallery/gallery19.jpg"
+                },   
+                {
+                  image: "/gallery/gallery20.jpg"
+                },   
+                {
+                  image: "/gallery/gallery21.jpg"
+                },   
+                {
+                  image: "/gallery/gallery22.jpg"
+                },   
+                {
+                  image: "/gallery/gallery23.jpg"
+                },   
+                {
+                  image: "/gallery/gallery24.jpg"
+                },   
+                {
+                  image: "/gallery/gallery25.jpg"
+                },   
+
+                {
+                  image: "/gallery/gallery26.jpg"
+                },   
+
+                {
+                  image: "/gallery/gallery27.jpg"
+                },   
+
+                {
+                  image: "/gallery/gallery28.jpg"
+                },   
+
+                {
+                  image: "/gallery/gallery29.jpg"
+                },   
+
+
+                {
+                  image: "/gallery/gallery30.jpg"
+                },   
+
+
+                {
+                  image: "/gallery/gallery31.jpg"
+                },   
+
+
+                {
+                  image: "/gallery/gallery32.jpg"
+                }  
+
+
               ].map((project, index) => (
                 <div key={index} className="group relative overflow-hidden rounded-lg">
-                  <div className="aspect-square relative">
+                  <div className="aspect-video">
                     <Image
                       src={project.image}
-                      alt={project.title}
+                      alt=""
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
@@ -224,7 +310,7 @@ export default function Home() {
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <Button 
                         variant="secondary"
-                        onClick={() => setSelectedImage({ url: project.image, title: project.title })}
+                        onClick={() => setSelectedImage({ url: project.image, title: "" })}
                       >
                         View
                       </Button>
@@ -240,6 +326,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+
+
 
         <section id="testimonials" className="py-16 md:py-24 bg-muted/50">
           <div className="container">
