@@ -43,6 +43,9 @@ export default function Home() {
               Contact
             </Link>
           </nav>
+
+
+          
           <Button asChild className="hidden md:inline-flex">
             <Link href="#contact">Get a Quote</Link>
           </Button>
@@ -111,7 +114,8 @@ export default function Home() {
                 Contact
               </Link>
               <Button asChild className="w-full">
-                <Link href="#contact">Get a Quote</Link>
+                <Link href="#contact"
+                onClick={() => setIsMobileMenuOpen(false)}>Get a Quote</Link>
               </Button>
             </nav>
           </div>
