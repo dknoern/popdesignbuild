@@ -11,6 +11,7 @@ import { ImageModal } from "./components/image-modal"
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState<{ url: string; title: string } | null>(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -45,7 +46,12 @@ export default function Home() {
           <Button asChild className="hidden md:inline-flex">
             <Link href="#contact">Get a Quote</Link>
           </Button>
-          <Button variant="outline" size="icon" className="md:hidden">
+          <Button 
+            variant="outline" 
+            size="icon" 
+            className="md:hidden"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
             <span className="sr-only">Toggle menu</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +71,51 @@ export default function Home() {
             </svg>
           </Button>
         </div>
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden border-t">
+            <nav className="container py-4 flex flex-col gap-4">
+              <Link 
+                href="#services" 
+                className="text-sm font-medium hover:underline underline-offset-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link 
+                href="#portfolio" 
+                className="text-sm font-medium hover:underline underline-offset-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Portfolio
+              </Link>
+              <Link 
+                href="#testimonials" 
+                className="text-sm font-medium hover:underline underline-offset-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Testimonials
+              </Link>
+              <Link 
+                href="#about" 
+                className="text-sm font-medium hover:underline underline-offset-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link 
+                href="#contact" 
+                className="text-sm font-medium hover:underline underline-offset-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <Button asChild className="w-full">
+                <Link href="#contact">Get a Quote</Link>
+              </Button>
+            </nav>
+          </div>
+        )}
       </header>
       <main className="flex-1">
         <section className="relative">
